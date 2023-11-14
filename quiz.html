@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Systems Quiz!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      color: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #quiz-container {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: black;
+    }
+
+    button {
+      background-color: #bf17cf;
+      color:  black;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    button:hover {
+      background-color: #bf17cf;
+      transform: scale(1.01);
+    }
+
+    #question-container {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    #options-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #bf17cf;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #options-container button.correct {
+      background-color: #4caf50;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #options-container button.incorrect {
+      background-color: #e53935;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: black;
+      margin-bottom: 10px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #feedback {
+      font-size: 16px;
+      color: black;
+      display: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    #circle-container {
+      margin-top: 20px;
+      text-align: center;
+      display: none;
+      margin-left: 10px;;
+    }
+
+    #back{
+    background-color: #ffffff;
+    color: #000000;
+    padding-left: 200px;
+    }
+
+    #back:hover{
+        cursor: pointer;
+    }
+
+
+    #circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: black;
+  border: 10px solid #bf17cf;
+  overflow: hidden;
+}
+
+#percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #bf17cf;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line break */
+}
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Information Systems Impact on Business Quiz</h1>
+    <div id="question-container"></div>
+    <div id="options-container"></div>
+    <div id="result"></div>
+    <div id="feedback"></div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div id="backbutton">
+    <button id="back" onclick="goBack()">Go Back</button>
+  </div>
+
+
+  <div id="circle-container">
+    <div id="circle">
+      <div id="fill"></div>
+      <span id="percentage">0%</span>
+    </div>
+  </div>
+
+  
+  <script>
+const quizData = [
+  // Data Visualization
+  {
+    question: "What is the primary purpose of data visualization in business?",
+    options: [
+      "To create visually appealing charts and graphs",
+      "To present data in a visual and understandable format",
+      "To make data more complex for advanced analysis",
+      "To limit access to information"
+    ],
+    correctAnswer: "To present data in a visual and understandable format"
+  },
+  {
+    question: "How can data visualization aid decision-making in a business?",
+    options: [
+      "By providing basic charts and graphs",
+      "By reducing the amount of information available",
+      "By making data more difficult to interpret",
+      "By providing insights through complex visual representation of data"
+    ],
+    correctAnswer: "By providing insights through complex visual representation of data"
+  },
+  // Information Quality
+  {
+    question: "Why is information quality important in a business setting?",
+    options: [
+      "To slow down information processing",
+      "To ensure accurate and reliable information",
+      "To make decisions more complex",
+      "To limit access to information"
+    ],
+    correctAnswer: "To ensure accurate and reliable information"
+  },
+  {
+    question: "What are the consequences of poor information quality in business operations?",
+    options: [
+      "Improved decision-making",
+      "Increased efficiency",
+      "Misinformed decisions and operational inefficiencies",
+      "Enhanced customer service"
+    ],
+    correctAnswer: "Misinformed decisions and operational inefficiencies"
+  },
+  // Data Ethics
+  {
+    question: "Why is ethical handling of data important in business?",
+    options: [
+      "To discourage creativity",
+      "To limit access to information",
+      "To ensure ethical challenges for decision-makers",
+      "To build trust with customers and stakeholders"
+    ],
+    correctAnswer: "To build trust with customers and stakeholders"
+  },
+  {
+    question: "What are some key considerations for ensuring data ethics in business practices?",
+    options: [
+      "Ignoring ethical principles",
+      "Ensuring transparency, privacy, and consent",
+      "Limiting access to information",
+      "Automating all ethical decisions"
+    ],
+    correctAnswer: "Ensuring transparency, privacy, and consent"
+  },
+  // AI and Information Systems in Business
+  {
+    question: "How can AI contribute to improving business processes?",
+    options: [
+      "By automating routine tasks and decision-making",
+      "By discouraging innovation",
+      "By limiting access to information",
+      "By adding necessary complexity to operations"
+    ],
+    correctAnswer: "By automating routine tasks and decision-making"
+  },
+  {
+    question: "What challenges may businesses face when implementing AI systems?",
+    options: [
+      "Increased efficiency",
+      "Reduced complexity",
+      "Ethical concerns, bias, and lack of transparency",
+      "Improved decision-making"
+    ],
+    correctAnswer: "Ethical concerns, bias, and lack of transparency"
+  },
+  // Information System Integration in a Business
+  {
+    question: "Why is information system integration important for businesses?",
+    options: [
+      "To make decisions more complex",
+      "To slow down information processing",
+      "To improve collaboration and streamline processes",
+      "To limit access to information"
+    ],
+    correctAnswer: "To improve collaboration and streamline processes"
+  },
+  {
+    question: "What benefits can businesses achieve through effective information system integration?",
+    options: [
+      "Increased complexity and confusion",
+      "Improved data flow, communication, and efficiency",
+      "Reduced efficiency",
+      "Limited access to information"
+    ],
+    correctAnswer: "Improved data flow, communication, and efficiency"
+  },
+  // Customizing Information Systems
+  {
+    question: "Why might a business choose to customize its information systems?",
+    options: [
+      "To discourage collaboration",
+      "To make decisions more complex",
+      "To limit access to information",
+      "To meet specific business needs and workflows",
+    ],
+    correctAnswer: "To meet specific business needs and workflows"
+  },
+  {
+    question: "What challenges could businesses face when customizing information systems?",
+    options: [
+      "Increased collaboration and efficiency",
+      "Reduced complexity",
+      "Compatibility issues, increased costs, and maintenance challenges",
+      "Improved decision-making"
+    ],
+    correctAnswer: "Compatibility issues, increased costs, and maintenance challenges"
+  },
+  // Additional Questions
+  // Add more questions related to the remaining topics: Data Ethics, AI and Information Systems, Information System Integration, Customizing Information Systems
+  
+  // Data Ethics (continued)
+  {
+    question: "How can businesses ensure ethical data handling in the era of big data?",
+    options: [
+      "By ignoring ethical considerations for the sake of innovation",
+      "By anonymizing and protecting sensitive information",
+      "By limiting access to data for all employees",
+      "By encouraging unauthorized use of data"
+    ],
+    correctAnswer: "By anonymizing and protecting sensitive information"
+  },
+  {
+    question: "What role does transparency play in maintaining data ethics?",
+    options: [
+      "To confuse stakeholders and competitors",
+      "To limit access to information",
+      "To build trust and accountability",
+      "To discourage ethical decision-making"
+    ],
+    correctAnswer: "To build trust and accountability"
+  },
+  // AI and Information Systems in Business (continued)
+  {
+    question: "How can businesses address the ethical concerns associated with AI algorithms?",
+    options: [
+      "By promoting biased decision-making",
+      "By ensuring transparency, fairness, and accountability",
+      "By discouraging innovation in AI",
+      "By limiting access to information about AI systems"
+    ],
+    correctAnswer: "By ensuring transparency, fairness, and accountability"
+  },
+  {
+    question: "What potential risks may arise from relying too heavily on AI in business operations?",
+    options: [
+      "Increased efficiency and improved decision-making",
+      "Ethical concerns, job displacement, and bias",
+      "Reduced complexity and streamlined processes",
+      "Improved collaboration and communication"
+    ],
+    correctAnswer: "Ethical concerns, job displacement, and bias"
+  },
+  // Information System Integration in a Business (continued)
+  {
+    question: "How can businesses overcome challenges related to information system integration?",
+    options: [
+      "By avoiding integration altogether",
+      "By investing in training programs for employees",
+      "By increasing complexity in information flow",
+      "By limiting access to information for certain departments"
+    ],
+    correctAnswer: "By investing in training programs for employees"
+  },
+  {
+    question: "What role does communication play in the success of information system integration?",
+    options: [
+      "To slow down information flow",
+      "To create confusion and chaos",
+      "To improve collaboration and understanding",
+      "To discourage collaboration among departments"
+    ],
+    correctAnswer: "To improve collaboration and understanding"
+  },
+  // Customizing Information Systems (continued)
+  {
+    question: "Why is it important for businesses to regularly update and adapt customized information systems?",
+    options: [
+      "To limit access to information",
+      "To discourage innovation",
+      "To meet evolving business needs and technological advancements",
+      "To increase complexity in business operations"
+    ],
+    correctAnswer: "To meet evolving business needs and technological advancements"
+  },
+  {
+    question: "What considerations should businesses keep in mind when choosing to build or buy customized information systems?",
+    options: [
+      "Evaluating cost, time, and specific business needs",
+      "Ignoring cost and efficiency factors",
+      "Limiting access to information for decision-makers",
+      "Discouraging collaboration among IT professionals"
+    ],
+    correctAnswer: "Evaluating cost, time, and specific business needs"
+  }
+];
+
+
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      // ... (your existing loadQuestion function)
+      const questionContainer = document.getElementById("question-container");
+      const optionsContainer = document.getElementById("options-container");
+      const resultContainer = document.getElementById("result");
+      const feedbackContainer = document.getElementById("feedback");
+
+      resultContainer.style.display = "none"; // Hide the result container
+      feedbackContainer.style.display = "none"; // Hide the feedback container
+
+      const currentQuizData = quizData[currentQuestion];
+
+      questionContainer.innerHTML = currentQuizData.question;
+
+      optionsContainer.innerHTML = "";
+      for (let i = 0; i < currentQuizData.options.length; i++) {
+        const option = document.createElement("button");
+        option.innerHTML = currentQuizData.options[i];
+        option.addEventListener("click", function() {
+          checkAnswer(this);
+        });
+        optionsContainer.appendChild(option);
+      }
+
+      // Display the "Next" button when loading the question
+      document.querySelector("button").style.display = "block";
+    }
+
+    function checkAnswer(selectedOption) {
+      // ... (your existing checkAnswer function)
+      const currentQuizData = quizData[currentQuestion];
+
+      const options = document.querySelectorAll("#options-container button");
+      options.forEach(option => {
+        option.disabled = true;
+        if (option.innerHTML === currentQuizData.correctAnswer) {
+          option.classList.add("correct");
+        } else {
+          option.classList.add("incorrect");
+        }
+      });
+
+      if (selectedOption.innerHTML === currentQuizData.correctAnswer) {
+        score++;
+      }
+
+      document.getElementById("result").innerHTML = `Your Score: ${score} out of ${quizData.length}`;
+
+      setTimeout(nextQuestion, 2000); // Automatically move to the next question after 2 seconds
+    }
+
+    function nextQuestion() {
+      const options = document.querySelectorAll("#options-container button");
+      options.forEach(option => {
+        option.classList.remove("correct", "incorrect");
+        option.disabled = false;
+      });
+
+      currentQuestion++;
+
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    }
+    
+    function countTo() {
+  let from = 0;
+  let to = (score / quizData.length) * 100;
+  let step = to > from ? 1 : -1;
+  let interval = 20; // Adjust the interval duration as needed
+
+  if (from == to) {
+    document.getElementById("percentage").textContent = `${from.toFixed(1)}%`;
+    return;
+  }
+
+  let counter = setInterval(function () {
+    from += step;
+    document.getElementById("percentage").textContent = `${from.toFixed(1)}%`;
+
+    if (from == to) {
+      clearInterval(counter);
+    }
+  }, interval);
+}
+
+// Call countTo() in your showResult() function
+function showResult() {
+  const resultContainer = document.getElementById("result");
+  const feedbackContainer = document.getElementById("feedback");
+  const circleContainer = document.getElementById("circle-container");
+  const percentageElement = document.getElementById("percentage");
+  const percentage = (score / quizData.length) * 100;
+
+  resultContainer.innerHTML = `<p>Your Score: ${score} out of ${quizData.length}</p>`;
+  resultContainer.style.display = "flex";
+
+  feedbackContainer.innerHTML = getFeedback(percentage);
+  feedbackContainer.style.display = "block";
+
+  document.getElementById("question-container").style.display = "none";
+  document.getElementById("options-container").style.display = "none";
+  document.querySelector("button").style.display = "none";
+
+  countTo();
+
+  circleContainer.style.display = "block";
+}
+
+    function getFeedback(percentage) {
+      // ... (your existing getFeedback function)
+      if (percentage >= 80) {
+        return "Excellent! You have a strong understanding of the impact of information systems on business.";
+      } else if (percentage >= 60) {
+        return "Good job! You have a decent understanding of the impact of information systems on business.";
+      } else {
+        return "Keep learning! You can improve your understanding of the impact of information systems in business.";
+      }
+    }
+
+    // Initial load
+    loadQuestion();
+
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

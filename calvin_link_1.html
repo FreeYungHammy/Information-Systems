@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">What is cost reduction in information technology?</p>
+                        <p>IT cost reduction is lowering costs associated with IT systems, services, and products. It includes noticing areas that are not adding value for the money spent, reducing unnecessary expenses, and reducing costs to allow for IT operations to be more efficient. Through the use of this, the business will experience increased profits, improved IT operations and allowing for resources to free up to be utilized elsewhere. </p>
+                        <br>
+                        <p>In terms of information systems, businesses use information systems to gather data, process it, and present it in a specified way. These businesses use this information for market research, strategy development and automation. By utilizing information systems within a business, they manage to streamline operations to reduce costs.</p>
+                        <br>
+                        <p>Streamlining includes taking existing processes and eliminating repetitive and unnecessary steps in order to make them more efficient and effective. This includes assessing current processes to get the overall idea of the exact way the work is completed to notice where the process can improve. </p>
+                        <br>
+                        <p>Standardizing technology ~ Standardizing the technology in a business is the procedure of taking the applications and IT infrastructure and creating a standard baseline that fit inline with your business strategy, policies, and objectives. This allows for reduces complexity, cost saving through economies of scale, integration ease, efficiency, and simpler IT support.</p>
+                        <br>
+                        <p>In terms of low-income start-up businesses, information systems have provided a way for these businesses to operate while utilizing it. It enables these businesses to have global access to many different resources that might have been previously too expensive to use.</p>
+                        <br>
+                        <p>Leveraging the existing technology in a business environment is optimizing the use of all applications and tools to assist in the success of the business. In order to incorporate this, it requires updating systems, replacing outdated facilities and tools, and training your team on the most efficient and effective ways to use new technology. By including new technologies, such as information systems, it would lead to improved decision-making. It uses software to analyse data and allows for the business to find pointers in choosing the correct course of action. </p>
+                        <br>
+                        <p>Vendor consolidation ~ Vendor consolidation in IT relates to lowering the number of suppliers and service providers that a business deals with. Instead of working with multiple suppliers for specific needs, it would be advantageous to find a vendor that will satisfy the businesses requirements and overall reduce excess costs. Along with this, information systems can create alliances with related organizations to exchange information which might influence vendors to allow for a decreased price in their operations with the business.</p>
+                        <br>
+                        <p>Process Automation and Virtualization ~ Automating processes is adopting technology that can integrate workflows and avoid having to complete long and monotonous tasks. This allows for the business to assign the workforce and resources on other duties. Virtualization includes taking software or hardware and creating a virtual clone, this takes the responsibility of maintaining the software or hardware off of the business to whomever it is situated with.</p>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Key Principles</p>  
+                        <ul>
+                            <li><strong>Privacy:</strong> Regarding people's security freedoms by dealing with and safeguarding their own information dependably.</li>
+                            <li><strong>Transparency:</strong> Obviously imparting how information is gathered, utilized, and shared to fabricate trust with partners.</li>
+                            <li><strong>Fairness:</strong> Guaranteeing that the utilization of information doesn't bring about unreasonable or unfair results.</li>
+                            <li><strong>Consent:</strong> Getting educated and unequivocal assent prior to gathering and utilizing people's information.</li>
+                        </ul>                
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Challenges in Data Ethics</p> 
+                    <ul>
+                        <li><strong>Bias in Data:</strong> Information might convey predispositions reflecting verifiable biases. Tending to and moderating these inclinations is a huge test.</li>
+                        <li><strong>Lack of Regulation:</strong> In certain unique circumstances, there may be an absence of clear guidelines, making it trying to explore moral contemplations.</li>
+                        <li><strong>Emerging Advancements:</strong> Moral difficulties frequently emerge with the presentation of new innovations, for example, computer-based intelligence, that might have potentially negative side-effects.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Business Implications</p> 
+                    <ul>
+                        <li><strong>Reputation Management:</strong> Untrustworthy utilization of information can harm an organization's standing, prompting a deficiency of client trust and faithfulness.</li>
+                        <li><strong>Legal Compliance:</strong> Complying with data ethics is urgent for following protection regulations and staying away from lawful repercussions.</li>
+                        <li><strong>Client Connections:</strong> Regarding information morals cultivates positive associations with clients, who are progressively worried about how their information is taken care of.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Best Practices</p> 
+                    <ul>
+                        <li><strong>Ethics Training:</strong> Giving preparation to workers on information morals and advancing a culture of moral way of behaving.</li>
+                        <li><strong>Ethics Committees:</strong> Laying out advisory groups to audit and guide moral contemplations in information related rehearses.</li>
+                        <li><strong>Continuous Monitoring:</strong> Routinely surveying information practices to guarantee continuous adherence to moral guidelines.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

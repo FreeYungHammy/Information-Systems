@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">References</p>
+                        <h1><a href="https://www.techtarget.com/searchsecurity/definition/What-is-risk-management-and-why-is-it-important#:~:text=Risk%20management%20is%20the%20process." target="_blank">Tucci, L. (2021). What is Risk Management and Why is it Important? [online] TechTarget. </a></h1>
+                        <h1><a href="https://www.investopedia.com/terms/s/scm.asp" target="_blank">Fernando, J. (2022). Supply Chain Management (SCM): How It Works and Why It Is Important. [online] Investopedia.</a></h1>
+                        <h1><a href="https://smallbusiness.chron.com/key-concepts-financial-management-60904.html" target="_blank">Hill, B. (2013). Key Concepts of Financial Management. [online] Chron</a></h1>
+                        <h1><a href="https://www.investopedia.com/terms/c/competitive_advantage.asp#:~:text=%25%2025%25%200%25-." target="_blank">Investopedia. (n.d.). Competitive Advantage Definition With Types and Examples. [online]</a></h1>
+                        <h1><a href="https://www.spendesk.com/en-eu/blog/growth-vs-scaling/" target="_blank">Spendesk. (n.d.). Growth vs scaling: What’s the difference and why does it matter? [online]</a></h1>
+                        <h1><a href="https://sloanreview.mit.edu/article/driving-operational-cost-savings-with-the-internet-of-things/" target="_blank">Buiocchi, T. (2017). Driving Operational Cost Savings With the Internet of Things. [online] MIT Sloan Management Review.</a></h1>
+                        <h1><a href="https://infraon.io/blog/it-cost-reduction/#:~:text=For%20example%2C%20companies%20can%20reduce,to%20manage%20their%20IT%20solutions." target="_blank">‌SeventhQueen (2023). 10 ways to reduce your IT cost | Infraon. [online] Infraon Blogs - Experts Insights on ITOps and Customer Success.</a></h1>
+                        <h1><a href="https://www.indeed.com/career-advice/career-development/streamline-processes-and-workflows" target="_blank">Indeed.com. (2022). 6 Ways To Streamline Business Processes and Workflows | Indeed.com. [online]</a></h1>
+                        <h1><a href="https://www.lazorpoint.com/insights/it-standardization" target="_blank">Lazor, D. (2020). Lazorpoint. [online] Lazorpoint</a></h1>
+                        <h1><a href="https://www.linkedin.com/pulse/process-automation-virtualization-mukesh-m/" target="_blank">Linkedin.com. (2023). LinkedIn. [online]</a></h1>
+                        <h1><a href="https://www.wolterskluwer.com/en/solutions/cch-tagetik/glossary/compliance-reporting#:~:text=Compliance%20reports%20serve%20as%20proof,cases%2C%20imprisonment%20or%20forced%20closure. " target="_blank">Wolterskluwer.com. (2022). Compliance reporting. [online]</a></h1>
+                        <h1><a href="https://www.hotjar.com/customer-insights/" target="_blank">Hotjar.com. (2022). What is Customer Insights? [Definition, Types, and Examples]. [online]</a></h1>
+                        <h1><a href="https://www.sciencedirect.com/science/article/abs/pii/S0963868710000181" target="_blank">Gorla, N., Somers, T.M. and Wong, B. (2010). Organizational impact of system quality, information quality, and service quality. Journal of Strategic Information Systems, [online] </a></h1>
+                        <h1><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/data-ethics-what-it-means-and-what-it-takes" target="_blank">Edquist, A., Grennan, L., Griffiths, S. and Kayvaun Rowshankish (2022). Data ethics: What it means and what it takes. [online] McKinsey & Company.</a></h1>
+                        <h1><a href="https://www.techtarget.com/searchcustomerexperience/definition/integration#:~:text=In%20an%20IT%20context%2C%20integration,easily%20shares%20data%20when%20needed" target="_blank">Kinza Yasar and Ehrens, T. (2022). integration. [online] Customer Experience.</a></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

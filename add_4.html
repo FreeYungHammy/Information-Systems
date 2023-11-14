@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Key Perspectives</p>  
+                        <ul>
+                            <li><strong>Data Analysis and Insights:</strong> AI enhances the examination of tremendous datasets, removing significant bits of knowledge and examples that may be trying for customary frameworks to reveal.</li>
+                            <li><strong>Automation:</strong> AI automates normal and complex undertakings, expanding operational proficiency and permitting representatives to zero in on higher-esteem exercises.</li>
+                            <li><strong>Predictive Capabilities:</strong> AI can foresee future patterns and results in light of historic data, working with proactive navigation.</li>
+                            <li><strong>Personalization:</strong> AI empowers customized client encounters by breaking down individual inclinations and ways of behaving.</li>
+                        </ul>               
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Business Applications</p> 
+                    <ul>
+                        <li><strong>Customer Service Chatbots:</strong> AI-powered chatbots handle client inquiries, giving prompt reactions and further developing consumer loyalty.</li>
+                        <li><strong>Predictive Analytics:</strong> Organizations use AI to anticipate market patterns, client inclinations, and likely dangers, helping with key preparation.</li>
+                        <li><strong>Fraud Detection:</strong> AI calculations dissect examples to recognize expected false exercises continuously.</li>
+                        <li><strong>Recommendation Systems:</strong> AI is utilized to recommend customized suggestions for items or content in light of client conduct.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Challenges</p> 
+                    <ul>
+                        <li><strong>Data Quality and Bias:</strong> The viability of AI is dependent upon the nature of the data it cycles, and inclinations in preparing data can bring about one-sided results.</li>
+                        <li><strong>Ethical Considerations:</strong> AI frameworks might confront moral situations, for example, security concerns and the dependable utilization of AI in navigation.</li>
+                        <li><strong>Integration Complexity:</strong> Incorporating AI into existing data frameworks can be perplexing and requires cautious wanting to guarantee similarity.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                  
+                    <p class="heading">How do we enhance Security in information technology?</p>
+                    <p>Security in IT is crucial to utilize and maintain, without any security measures in place, it makes it extremely difficult to prevent attacks and it becomes incredibly easy for users who have malicious intent to access, alter or remove information. </p>
+                    <br>
+                    <p>Due to importance of information systems, they have become a large target for attacks. This is due to information systems holding mass amounts of valuable and confidential information, if someone were to gain access to this information, it could drive the business into the ground with very little ability to recover. This outlines the importance of security, and it is vital to ensure that device is completely secure before using it. </p>
+                    <br>
+                    <p>The security triad ~ confidentiality, integrity, availability. Adopting the following will lead to great security success.</p>
+                    <br>
+                    <p>Protecting information requires restricting information to only people who are allowed to see it, such as in a university scenario. The grades that students receive should not be shared with everyone at the university and should only have specific access. Ensure that only certain people have authorized access, and that you can trust them to not to share any confidential material. </p>
+                    <br>
+                    <p>Integrity is the promise that any information shared has not been altered and only represents what is intended. Integrity can be lost through malicious intent - if someone unauthorized changes data, this causes the information to no longer hold its integrity. Going back to the grades example, a hacker may hack into the information system and change their grade. Integrity can also be lost unintentionally through a surge that could corrupt a file or someone accidentally deletes it. </p>
+                    <br>
+                    <p>Availability means that information can be accessed and modified by anyone who is authorized to do so in a valid time frame. However, the time frame is dependent on the situation and information, for example, a stock trader needs information instantly. Therefore, the time frame to access the required information must be constant.  </p>
+                    <br>
+                    <p>Authentication involves using another way to verify a sign in with a separate entity. A very popular way to utilize authentication is through the use of two factor authentication, this includes linking an email address that the service can send a code to. The code is used to verify that the person trying to access the service has access to an email address associated with the service, usually the only person who is getting into the service would be the only person who has access to the email address connected to it.</p>
+                    <p>The other way to introduce authentication is via biometrics and identification documentation. Biometrics is the use of a physical human body part to verify the identity of the person. For example, using a fingerprint or their eye. Identification documents can be uploaded to prove the identity of the person attached to a service. </p>
+                    <br>
+                    <p>Access control ~ This is another way to prevent unauthorised access to sensitive information. An organisation can adopt access control to give or revoke access to certain people. This is a very popular form of security in today's world, in an organisation, they can allocate that the management has full access to all the information but a person in a lower department can only access various information.</p>
+                    <br>
+                    <p>Encryption ~ Encryption is the process of encoding data during transmission or in storage so that only authorised people can access it. When someone wants to encrypt the data, it is done through software and sent to the receiver. The receiver accepts the cipher text and decrypts it. However, in order for this to be achieved, both the receiver and sender need to agree on a process of encoding so both can communicate correctly. One method of encoding is where both parties share access to an encryption key that allows them to both encode and decode any forms of communication. This is known as symmetric key encryption. There is one side of downfall, which is that the key is available in two different places. </p>
+                    <br>
+                    <p>Firewalls ~ A firewall can be both software or hardware, it is connected to a network and filters all incoming packets based on a set of protocols and rules. A firewall would operate on the operating system and intercepts packets as soon as they arrive at the computer. This enhances security on the aspect that only information following a strict set of rules is able to be communicated to the network and computers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+
+        function goBack() {
+            window.history.back();
+        }
+        
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

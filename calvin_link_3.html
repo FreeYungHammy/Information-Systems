@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    
+                    <p class="heading">What is compliance reporting and how does it relate to information systems? </p>
+                    <p>Compliance reports show how an organization follows rules, regulations, laws, and industry standards that are required by governments. They are a form of proof that the organization correctly adheres to the set guidelines and laws that have been set. They could explain in detail the organization’s progress and overview of a company’s compliance. These compliant reports can be compulsory to provide or as simple as an overview of the company. </p>
+                    <p class="headings">Different types of compliance reports: </p>
+                    <p>Regulatory - Regulatory compliance reports are reports that demonstrate a business’s obedience to the regulatory requirements. These reports are presented to regulatory personnel who determine the status of their compliance. Depending on the location of the organization and industry, rules and regulations will differ. </p>
+                    <br>
+                    <p>Financial - Financial compliance reports are followed to ensure that financial regulations, capital, and accounting standards are met. Balance sheets, cash flow statements, income statements are all examples of the documents that are reviewed to gain insight into the organizations financial strength and how effective their economies of scale are.  </p>
+                    <br>
+                    <p>IT - IT compliance reports relate to information security and data privacy laws and regulations and the businesses adherence to them. This includes a demonstration of the organizations information security tools that are being utilized and maintained, for example, access controls, encryption, backups. </p>
+                    <br>
+                    <p>Operational - Operational compliance reports outline the organization’s devotion to maintaining the operational standards, internal policies, and industry regulations. This is used to ensure that a business is keeping efficient and effective with their quality management systems, safety, supply chains etc.</p>
+                    <br>  
+                    
+                </div>
+
+                <div class="protocol1">
+                    <p class="headings">Objectives of compliance reporting:</p>
+                    <p>Fulfilling and maintaining regulatory requirements: Compliance reporting assists an organization in demonstrating their adherence to the correct laws and regulations. It provides legal evidence that the organization is either following these rules or not. </p>
+                    <br>
+                    <p>Provides proof of compliance: A compliance report allows for an organization to provide concrete evidence of compliance and adherence to any laws and regulations that apply. Not being able to provide these reports could strongly indicate that the business is vulnerable to legal issues. </p>
+                    <br>
+                    <p>Outlines the business for decision making: A compliance report can provide internal stakeholders who aren’t involved with the creation of compliance reports valuable information and insight on noticing how compliance requirements are being met, and to figure out if anything needs to be changed. </p>
+                    <br>
+                    <p>It can identify places to improve: A compliance report will indicate places that the business can improve, this could lead to cost reduction strategies being employed and overall benefit the business. </p>
+                    <br>
+                    <p>In terms of information system, it can display how a business is following the standards of information management and data privacy. As these are both required by any company that utilizes an information system structure. The compliance report can reassure its customers and stakeholders that the information contained is based on raw facts and remains with integrity. </p>
+                </div>
+                
+                <div class="protocol1">
+                    <p class="headings">Reporting Requirements:</p>
+                    <p>1.	Scope ~ It outlines the systems, processes and people involved. </p>
+                    <p>2.	Review of compliance process ~ It highlights constructive areas on how risk assessments were carried out, how protocols are being followed, the effects on control strategies that would have been implemented, assess how training has improved the organisation.</p>
+                    <p>3.	Summary of important areas ~ It provides details on how productive the business is being with its performance against vulnerabilities. These insights are based off raw data, this makes them reputable. </p>
+                    <p>4.	Allow for recommendations ~ Recommendation on improvement within the organisation, can allow for a business to implement different planning strategies to fill the gaps on the issues at hand</p>
+                </div>
+
+                <div class="protocol1">
+                    <p class="headings">How does an organisation develop an effective reporting process? </p>
+                    <p>Automated compliance reporting: There are automatic compliance reporting software that a business can use to easily create compliance reports upon request. This allows for a business to keep on top of the business and its functions. </p>
+                    <p>KPI monitoring: Key performance indicators (KPI’s) are quantifiable measures of performance to complete a specific objective in a given time frame. KPI’s can provide objectives, milestones to gauge progress, and valuable insights. This paired with compliance reporting can accurately show the steps taken to achieve an effective reporting process.</p>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>        
+    
+    function goBack() {
+        window.history.back();
+    }
+    
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

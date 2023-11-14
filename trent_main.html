@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <p>Information Systems In Business</p>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container">
+
+                <div class="protocol">
+                    <div>
+                        <p class="heading">Supply Chain Management (SCM)</p>
+                        <p class="protocol-content hidden">Supply Chain Management is the process of planning, executing, and controlling the flow of goods, services, and information from the point of origin to the point of consumption. In the context of IT, SCM heavily relies on technology for efficiency. Here's how they can achieve this:</p>
+                        <p><a href="trent_link_1.html">Click here to learn more -></a></p>
+                    </div>
+                </div>
+            
+                <div class="protocol">
+                    <p class="heading">Financial Management</p>
+                    <p class="protocol-content hidden">Financial Management in the IT world involves the strategic planning, monitoring, and control of financial resources within the context of Information Technology (IT). It is crucial for ensuring that IT projects and initiatives are cost-effective, efficient, and aligned with an organization's overall financial goals. Here's a more in-depth explanation with details:</p>
+                    <p><a href="trent_link_2.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">Competitive Advantage</p>
+                    <p class="protocol-content hidden">Competitive advantage refers to the unique qualities or strategies that enable a company to outperform its competitors in a particular market or industry. It's a critical concept in business and can take many forms. Here's an in-depth explanation with various details about competitive advantage:</p>
+                    <p><a href="trent_link_3.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">Risk Management </p>
+                    <p class="protocol-content hidden">Risk management is a crucial process in business and project management that involves identifying, assessing, prioritizing, and mitigating risks to achieve objectives and minimize potential negative impacts. It is essential for ensuring the success and sustainability of organizations and projects. Here's an in-depth explanation of risk management with key details:</p>
+                    <p><a href="trent_link_4.html">Click here to learn more -></a></p>
+                </div>
+
+                <div class="protocol">
+                    <p class="heading">Scalability and Growth </p>
+                    <p class="protocol-content hidden">Scalability and growth are integral concepts in business and technology, especially for companies looking to expand and succeed in a competitive environment. Scalability refers to a company's ability to handle increased workload, growth, or demands while maintaining or improving its performance and efficiency. Here's an in-depth explanation with key details about scalability and growth:</p>
+                    <p><a href="trent_link_5.html">Click here to learn more -></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const protocols = document.querySelectorAll(".protocol");
+
+    protocols.forEach((protocol) => {
+        let isTyping = false;
+        const contentParagraph = protocol.querySelector(".protocol-content");
+
+        if (contentParagraph) {
+            protocol.addEventListener("mouseenter", () => {
+                if (!isTyping) {
+                    isTyping = true;
+                    typeWriter(contentParagraph);
+                }
+            });
+        }
+    });
+
+    function typeWriter(element) {
+        const text = element.textContent;
+        element.textContent = "";
+        element.style.display = "block"; // Show the content
+
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 20); // Adjust the typing speed (in milliseconds) by changing this value
+            }
+        }
+
+        type();
+    }
+});
+
+
+
+
+    </script>
+  
+
+</body>
+</html>

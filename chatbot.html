@@ -1,0 +1,306 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+        }
+
+        #welcome-heading {
+            text-align: center;
+            /* color: #BF17CF; */
+            font-size: 50px;
+            margin-top: 50px;
+            font-weight: bold;
+            animation: flash 1s infinite;
+        }
+        #menu-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #BF17CF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            
+        }
+
+        /* Add this style to customize each menu group */
+        .menu-group {
+            flex: 1;
+            margin-right: 15px; /* Adjust as needed */
+            
+        }
+        .menu-group li{
+            list-style: none;
+            margin-right: 70px;
+            min-width: 200px;
+            
+        }
+        .menu-group a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        .menu-group p{
+            margin-right: 40px;
+            color: rgb(0, 0, 0);
+        }
+
+        #menu p {
+            margin: 0;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu ul li {
+            margin: 5px;
+        }
+
+        #menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #menu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* height: 60vh; */
+            margin-bottom: -250px;
+        }
+
+        #chat {
+            background-color: #ffffff;
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            border-radius: 20px;
+            width: 50%; /* Adjust the width as needed */
+            /* overflow-y: scroll; */
+            margin-bottom: 50px;
+        }
+
+
+        .user-message {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            margin: 20px;
+            border-radius: 5px;
+            align-self: flex-end;
+            max-width: 90%; /* Adjust the maximum width as needed */
+        }
+
+        .bot-message {
+            background-color: #bf17cf;
+            color: white;
+            padding: 8px;
+            margin: 20px;
+            border-radius: 5px;
+            align-self: flex-start;
+            max-width: 90%; /* Adjust the maximum width as needed */
+        }
+
+        #user-input {
+            width: 80%; /* Adjust the width as needed */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 250px;
+        }
+
+        @keyframes flash {
+            0%, 100% {
+                color: #BF17CF;
+            }
+            50% {
+                color: #ffffff;
+            }
+        }
+        .p1{
+            font-size: larger;
+            font-weight: 700;
+        } 
+    </style>
+    <title>Your Colorful Chatbot</title>
+</head>
+<body>
+   
+
+    <div id="menu-container">
+        <!-- First menu group -->
+        <div class="menu-group">
+            <p class="p1">Data Visualisation Topics:</p>
+            <ul>
+                <li><a href="#" id="topic-operation">Improved Operational Efficiency</a></li><br>
+                <li><a href="#" id="topic-management">Data Management and Analysis</a></li><br>
+                <!-- <li><a href="#" id="topic-financial">customer insights</a></li> -->
+            </ul>
+        </div>
+    
+        <!-- Second menu group -->
+        <div class="menu-group">
+            <p class="p1">Information Quality Topics:</p>
+            <ul>
+                <li><a href="#" id="topic-sec">Enhanced Security</a></li><br>
+                <li><a href="#" id="topic-insights">Customer Insights</a></li>
+            </ul>
+        </div>
+    
+        <!-- Third menu group -->
+        <div class="menu-group">
+            <p class="p1">Data Ethics Topics:</p>
+            <ul>
+               <li><a href="#" id="topic-reporting">Compliance and Reporting</a></li><br>
+                <li><a href="#" id="topic-risk">Risk Management</a></li>
+               
+            </ul>
+        </div>
+        </div>
+
+
+        <div id="menu-container">
+        <!-- fourth menu group -->
+        <div class="menu-group">
+            <p class="p1">AI Topics:</p>
+            <ul>
+                <li><a href="#" id="topic-design">Efficient Decision Making</a></li><br>
+                <li><a href="#" id="topic-grow">Scalability and Growth</a></li>
+            </ul>
+        </div>
+
+        <!-- fifth menu group -->
+        <div class="menu-group">
+            <p class="p1">Inforamtion System Integration topics:</p>
+            <ul>
+                <li><a href="#" id="topic-coms">Enhanced Communication and Collaboration</a></li><br>
+                <li><a href="#" id="topic-adv">Competitive Advantage</a></li>
+            </ul>
+        </div>
+
+        <!-- sixth menu group -->
+        <div class="menu-group">
+            <p class="p1">Customising Information Systems Topics:</p>
+            <ul>
+                <li><a href="#" id="topic-scm">Supply Chain Management</a></li><br>
+                <li><a href="#" id="topic-fin">Financial Management</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div id="welcome-heading">Welcome to Our Chatbot</div>
+    <div id="chat-container">
+        <div id="chat"></div>
+        <form id="user-form">
+            <input type="text" id="user-input" placeholder="Type your message...">
+        </form>
+    </div>
+
+    <div id="backbutton">
+        <button id="backbutton" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById("chat");
+        const userInput = document.getElementById("user-input");
+    
+        const responses = {
+            
+            "hi": "Hello and welcome Trent, Calvin, and Gideon! What can I assist you with today?",
+            "supply chain management": "Sure thing! Supply Chain Management (SCM) is the process of planning, executing, and controlling the flow of goods, services, and information from the point of origin to the point of consumption. It heavily relies on technology for efficiency. Key aspects include IT integration, real-time tracking, demand forecasting, supplier collaboration, and blockchain.",
+            "data visualisation": "Displaying data in graphical or visual formats to facilitate understanding and interpretation.",
+            "information quality": "Ensuring accuracy, consistency, and reliability of data for effective analysis and decision-making.",
+            "inforamtion system integration in a business": "Comprehensive systems that manage, process, and distribute information to support various business functions.",
+            "customising information systems": "Tailoring information systems to meet specific business requirements and optimize processes.",
+            "ai": "Integrating artificial intelligence technologies into information systems for enhanced decision-making, efficiency, and innovation.",
+            "financial management": "Financial Management in IT involves strategic planning, monitoring, and control of financial resources within the context of Information Technology. It encompasses financial software, data security, big data analytics, algorithmic trading, and regulatory compliance.",
+            "competitive advantage": "Competitive advantage refers to unique qualities or strategies that enable a company to outperform its competitors. IT fosters innovation, enhances efficiency, and personalizes customer experiences, contributing to competitive advantage.",
+            "risk management": "Risk management involves identifying, assessing, prioritizing, and mitigating risks to achieve objectives and minimize negative impacts. IT plays a crucial role in cybersecurity, compliance and regulation, and business continuity.",
+            "scalability and growth": "Scalability and growth are crucial for businesses. IT supports these concepts through cloud computing, e-commerce, and data-driven decision-making.",
+            "cost reduction": "Cost reduction in IT involves lowering expenses associated with systems, services, and products. It includes streamlining operations, standardizing technology, leveraging information systems, vendor consolidation, and process automation.",
+            "enhanced security": "Security in IT is crucial to prevent unauthorized access, alteration, or removal of valuable information. Key elements include the security triad (confidentiality, integrity, availability), authentication, access control, encryption, firewalls, compliance with data privacy laws, and more.",
+            "compliance and reporting": "Compliance reporting showcases adherence to rules, regulations, and industry standards. Types include regulatory, financial, IT, and operational compliance reports. Objectives include fulfilling regulatory requirements, providing proof of compliance, aiding decision-making, and identifying areas for improvement.",
+            "customer insights": "Customer insights involve analyzing customer analytics and market research data to understand needs, wants, and behaviors. Information systems play a vital role by collecting, managing, and analyzing data about customer interactions and preferences. This includes CRM software, communication channels, and predictive analytics.",
+            "efficient decision making": "The role of information systems in efficient decision-making is like a trusty market guide in a vibrant street market. They help businesses navigate a world of data, pointing them in the direction of the best choices. For example, your favorite local bakery uses these systems to track real-time pastry sales, making decisions quickly, much like having a decision-making sidekick.",
+            "improved operational efficiency": "Operational efficiency, akin to an organized kitchen before cooking, is where information systems act as master organizers for businesses. They streamline financial, personnel, and resource management, making everything run like a well-oiled machine. Imagine a bustling café using a system to handle everything from expenses to coffee bean stock, avoiding chaos during the morning rush – it's like having a behind-the-scenes superhero.",
+            "enhanced communication and collaboration": "Communication and teamwork are vital, and information systems act as tools for dispersed teams, making collaboration a breeze. They provide a virtual hangout where everyone can see each other, swap ideas, and work on projects. Even a multinational company with employees across continents can collaborate as if they're all in the same room.",
+            "data management and analysis": "Data is a treasure chest, useless if you can't find what you're looking for. Information systems act as savvy librarians, storing, organizing, and helping find data quickly. They empower businesses to make informed choices, understand customers, and refine services – much like having a superpower to uncover hidden secrets.", 
+        };
+    
+        function clearChatHistory() {
+            chatContainer.innerHTML = "";
+        }
+    
+        function appendMessage(user, message) {
+            const messageElement = document.createElement("div");
+            messageElement.className = user ? "user-message" : "bot-message";
+            messageElement.textContent = message;
+            chatContainer.appendChild(messageElement);
+        }
+    
+        function simulateTypingEffect(response) {
+            const messageElement = document.createElement("div");
+            messageElement.className = "bot-message";
+            chatContainer.appendChild(messageElement);
+    
+            const typingSpeed = 50;
+            let index = 0;
+    
+            function typeNextCharacter() {
+                if (index < response.length) {
+                    messageElement.textContent += response[index];
+                    index++;
+                    setTimeout(typeNextCharacter, typingSpeed);
+                }
+            }
+    
+            typeNextCharacter();
+        }
+    
+        function processUserInput() {
+            clearChatHistory();
+            const userMessage = userInput.value.toLowerCase();
+            appendMessage(true, userMessage);
+    
+            let matchedResponse = Object.keys(responses).find(key => userMessage.includes(key));
+    
+            if (matchedResponse) {
+                const botResponse = responses[matchedResponse];
+                simulateTypingEffect(botResponse);
+            } else {
+                appendMessage(false, "I'm sorry, I don't have information on that topic.");
+            }
+    
+            userInput.value = "";
+        }
+    
+        userInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                processUserInput();
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
+
+
+   

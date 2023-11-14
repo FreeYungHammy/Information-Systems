@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <p>Information Systems In Business</p>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="headings">Here is how we can achieve this in a IT business:</p>
+                     <ol>
+                        <li>IT Integration: Supply chains involve a network of suppliers, manufacturers, distributors, and retailers. IT systems like ERP software serve as the backbone, connecting these entities. These systems manage orders, inventory, and distribution efficiently.</li><br>
+                        <li>Real-time Tracking: Modern SCM heavily relies on IT for real-time tracking. RFID and IoT sensors enable organizations to monitor the movement of goods, providing visibility into their location and condition.</li><br>
+                        <li>Demand Forecasting: IT uses historical data and predictive analytics to forecast demand accurately. Machine learning models can adjust these forecasts in real-time, reducing overstock or stockouts.</li><br>
+                        <li>Supplier Collaboration: Cloud-based collaboration platforms facilitate communication with suppliers. IT enables collaborative demand planning, sharing inventory data, and coordinating production schedules.</li><br>
+                        <li>Blockchain: Blockchain technology enhances transparency and security. Each transaction in the supply chain is recorded in an immutable ledger, reducing the risk of fraud and errors.</li>
+                     </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

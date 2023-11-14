@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <p>Information Systems In Business</p>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container">
+
+                <div class="protocol">
+                    <div>
+                        <p class="heading">What is cost reduction in information technology?</p>
+                        <p class="protocol-content hidden">The focus is on reducing IT costs through streamlining processes, standardizing technology, and vendor consolidation. Information systems aid in data management and decision-making. For startups, they offer affordable global access. Leveraging existing technology and automation optimize workflows. Cost reduction is crucial for business competitiveness and efficiency.</p>
+                        <p><a href="calvin_link_1.html">Click here to learn more -></a></p>
+                    </div>
+                </div>
+            
+                <div class="protocol">
+                    <p class="heading">How do we enhance security in information technology with respect to information systems?</p>
+                    <p class="protocol-content hidden">This passage underscores the vital role of IT security in protecting information systems. It introduces the security triad—confidentiality, integrity, and availability—and discusses authentication methods, access control, encryption, and firewalls as essential measures for safeguarding information during transmission and storage in information systems.</p>
+                    <p><a href="calvin_link_2.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">What is compliance reporting and how does it relate to information systems?</p>
+                    <p class="protocol-content hidden">This passage underscores the importance of compliance reports in showcasing an organization's adherence to rules, with a focus on information systems. It covers different types of compliance reports—regulatory, financial, IT, and operational—and their objectives, including providing proof of compliance and identifying areas for improvement. In the context of information systems, compliance reports assure adherence to data privacy standards. Reporting requirements include scope, a review of the compliance process, a summary of important areas, and recommendations. Developing an effective reporting process involves automated compliance reporting and KPI monitoring for valuable insights into information system management.</p>
+                    <p><a href="calvin_link_3.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">Customer insights in information systems!</p>
+                    <p class="protocol-content hidden">Customer insights use data from sources like reviews and social media. Information systems play a crucial role by collecting and analyzing this data. CRM software organizes interactions, and communication channels are facilitated. Data analysis predicts customer behavior, helping tailor products and services effectively. Information systems are essential for turning insights into successful strategies.</p>
+                    <p><a href="calvin_link_4.html">Click here to learn more -></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const protocols = document.querySelectorAll(".protocol");
+
+    protocols.forEach((protocol) => {
+        let isTyping = false;
+        const contentParagraph = protocol.querySelector(".protocol-content");
+
+        if (contentParagraph) {
+            protocol.addEventListener("mouseenter", () => {
+                if (!isTyping) {
+                    isTyping = true;
+                    typeWriter(contentParagraph);
+                }
+            });
+        }
+    });
+
+    function typeWriter(element) {
+        const text = element.textContent;
+        element.textContent = "";
+        element.style.display = "block"; // Show the content
+
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 20); // Adjust the typing speed (in milliseconds) by changing this value
+            }
+        }
+
+        type();
+    }
+});
+
+    </script>
+  
+</body>
+</html>

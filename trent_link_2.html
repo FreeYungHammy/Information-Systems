@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">How do we can acheive better financial management?</p>
+                    <ol>
+                        <li>Financial Software: IT-driven financial software automates various financial processes. For instance, QuickBooks and similar software handle bookkeeping, invoicing, and payroll, simplifying financial management for small businesses.</li><br>
+                        <li>Data Security: Financial data is a prime target for cybercriminals. IT plays a vital role in securing sensitive financial information through encryption, access controls, and regular security audits.</li><br>
+                        <li>Big Data and Analytics: Financial institutions utilize big data analytics to assess credit risk, detect fraudulent transactions, and optimize investment portfolios. Machine learning models predict market trends, aiding investment decisions.</li><br>
+                        <li>Algorithmic Trading: In the world of finance, algorithmic trading relies on IT. Automated trading algorithms execute buy and sell orders at high speeds, reacting to market conditions.</li><br>
+                        <li>Regulatory Compliance: IT systems help companies adhere to financial regulations. They store and track financial data, making it easier to meet compliance requirements and avoid penalties.</li><br>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+
+        function goBack() {
+            window.history.back();
+        }
+        
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

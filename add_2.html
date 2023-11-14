@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Key Aspects</p>  
+                        <ul>
+                            <li><strong>Accuracy:</strong> Data should be liberated from mistakes and address the genuine situation. Erroneous information can prompt off track choices and operational shortcomings.</li>
+                            <li><strong>Reliability:</strong> Solid data is steady and can be relied on for direction. Conflicting or problematic information can dissolve trust in the data framework.</li>
+                            <li><strong>Relevance:</strong> Data ought to be appropriate to the current specific situation and the choice. Superfluous information can cloud chiefs' judgment.</li>
+                            <li><strong>Timeliness:</strong> Opportune data is conveyed when required. Obsolete data can prompt botched chances or inaccurate ends.</li>
+                        </ul>                
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Significance in Business</p> 
+                    <ul>
+                        <li><strong>Decision-making:</strong> Top-notch data is major for viable independent direction at all levels of an association.</li>
+                        <li><strong>Operational Efficiency:</strong> Solid information guarantees that business processes depend on exact data, diminishing mistakes and shortcomings.</li>
+                        <li><strong>Compliance:</strong> In enterprises with administrative prerequisites, keeping up with data quality is fundamental for satisfying consistence guidelines.</li>
+                        <li><strong>Client Trust:</strong> Clients trust organizations that deal with their information precisely, particularly in regions like individual data and exchanges.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Quality Assurance Procedures</p> 
+                    <ul>
+                        <li><strong>Data Validation:</strong> Carrying out approval checks to guarantee information precision and consistency.</li>
+                        <li><strong>Data Governance:</strong> Laying out strategies, cycles, and obligations to oversee and control information quality.</li>
+                        <li><strong>Data Profiling:</strong> Dissecting information to grasp its construction, content, and connections, helping with the recognizable proof of irregularities.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

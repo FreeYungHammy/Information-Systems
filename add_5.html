@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Key Aspects</p>  
+                        <ul>
+                            <li><strong>Unified Data:</strong> Integration ensures that data from different sources is accessible and coherent across the organization.</li>
+                            <li><strong>Improved Communication:</strong> Integrated systems facilitate seamless communication between departments, reducing silos and fostering collaboration.</li>
+                            <li><strong>Real-time Information:</strong> Coordination allows for real-time access to information, enabling timely decision-making.</li>
+                            <li><strong>Process Automation:</strong> Integrated systems often include automated workflows, reducing manual effort and minimizing errors.</li>
+                        </ul>              
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Integration Types</p> 
+                    <ul>
+                        <li><strong>Vertical Integration:</strong> Integrating systems at different levels of the organizational hierarchy (e.g., connecting sales with finance).</li>
+                        <li><strong>Horizontal Integration:</strong> Coordinating systems at the same organizational level (e.g., connecting different departments within sales).</li>
+                        <li><strong>Data Integration:</strong> Consolidating data from various sources to provide a comprehensive view.</li>
+                    </ul>            
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Benefits</p> 
+                    <ul>
+                        <li><strong>Operational Efficiency:</strong> Coordination streamlines processes, reduces unnecessary redundancy, and minimizes manual data entry, leading to improved operational efficiency.</li>
+                        <li><strong>Enhanced Decision-making:</strong> Access to real-time and consolidated data supports more informed decision-making.</li>
+                        <li><strong>Cost Reduction:</strong> Streamlining processes and reducing manual efforts contribute to cost reduction.</li>
+                        <li><strong>Customer Satisfaction:</strong> Integrated systems contribute to a smoother customer experience by providing a unified view of customer interactions and history.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Challenges</p> 
+                    <ul>
+                        <li><strong>Compatibility Issues:</strong> Ensuring that different systems can seamlessly integrate without compatibility issues can be a challenge.</li>
+                        <li><strong>Security Concerns:</strong> Integrating systems requires careful consideration of security measures to safeguard sensitive information.</li>
+                        <li><strong>Resistance to Change:</strong> Employees may resist changes in workflow or the adoption of new integrated systems, requiring change management strategies.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

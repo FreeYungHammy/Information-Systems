@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Data Visualization Benefits</p>  
+                        <ul>
+                            <li><strong>Enhanced Understanding:</strong> Picturing data makes complex information more accessible. Leaders can rapidly get a handle on patterns, examples, and bits of knowledge that might be trying to perceive from crude information.</li>
+                            <li><strong>Decision Support:</strong> Perceptions help in direction by giving an unmistakable portrayal of key performance indicators (KPIs) and pertinent measurements. This supports vital preparation and strategic navigation.</li>
+                            <li><strong>ID of Patterns and Examples:</strong> Through diagrams, charts, and other visual components, data visualization works with the distinguishing proof of patterns, examples, and exceptions in datasets, considering proactive decision making.</li>
+                            <li><strong>Communication:</strong> Perceptions are incredible assets for passing data on to different stakeholders. They improve on complex information for non-specialized crowds, encouraging better correspondence inside the association.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Tools and Strategies</p> 
+                    <ul>
+                        <li><strong>Charts and Graphs:</strong> Bar charts, line graphs, pie charts, etc., are basic for addressing various sorts of information.</li>
+                        <li><strong>Dashboards:</strong> Intelligent dashboards combine numerous representations, giving a complete outline of key measurements.</li>
+                        <li><strong>Heatmaps:</strong> These graphical portrayals assist with imagining the size of a peculiarity, frequently utilizing variety varieties.</li>
+                        <li><strong>Geospatial Perceptions:</strong> Maps and geographic data frameworks (GIS) are utilized to address information in spatial settings, giving experiences into location-based designs.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Models in Business</p> 
+                    <ul>
+                        <li><strong>Sales Performance:</strong> Envisioning deals information distinguishes top-performing items, deals patterns, and geological regions with high or low sales.</li>
+                        <li><strong>Financial Analysis:</strong> Graphical portrayals of monetary information, for example, pay articulations and accounting reports, help in examining monetary execution after some time.</li>
+                        <li><strong>Customer Segmentation:</strong> Envisioning client information upholds the distinguishing proof of unmistakable client fragments in light of socioeconomics, conduct, or inclinations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Key Aspects</p>  
+                        <ul>
+                            <li><strong>Adaptation to Business Processes:</strong> Customization allows organizations to align information systems with their existing processes, promoting efficiency and reducing friction.</li>
+                            <li><strong>Scalability:</strong> Customized systems can be designed to scale with the growth of the business, accommodating increased data volume and user demands.</li>
+                            <li><strong>User Experience:</strong> Tailoring user interfaces and functionalities improves the overall user experience, making the system more user-friendly.</li>
+                            <li><strong>Integration with Existing Systems:</strong> Customization enables seamless integration with other existing systems, ensuring a cohesive IT environment.</li>
+                        </ul>                            
+                    </div>
+                </div>
+            
+                <div class="protocol1">
+                    <p class="heading">Business Applications</p> 
+                    <ul>
+                        <li><strong>Client Relationship Management (CRM):</strong> Customized CRM systems can capture and analyze customer data based on specific business requirements, enhancing customer interactions.</li>
+                        <li><strong>Supply Chain Management:</strong> Tailoring supply chain systems allows organizations to align the system with their unique supply chain processes and improve planned operations.</li>
+                        <li><strong>Financial Management:</strong> Customized financial systems address specific reporting requirements, ensuring accurate financial analysis and compliance.</li>
+                    </ul>          
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Benefits</p> 
+                    <ul>
+                        <li><strong>Competitive Advantage:</strong> Customization provides a strategic advantage by allowing organizations to tailor their systems to support unique processes.</li>
+                        <li><strong>Efficiency Gains:</strong> Customized systems streamline processes, reducing time and effort needed for various tasks.</li>
+                        <li><strong>Improved User Adoption:</strong> Systems that are customized to match the workflow and preferences of users are more likely to be adopted by employees.</li>
+                    </ul>
+                </div>
+
+                <div class="protocol1">
+                    <p class="heading">Challenges</p> 
+                    <ul>
+                        <li><strong>Development Costs:</strong> Customization can be resource-intensive, and development costs may be higher compared to off-the-shelf solutions.</li>
+                        <li><strong>Maintenance Complexities:</strong> Customized systems may require more work to maintain, especially when updates or changes are needed.</li>
+                        <li><strong>Vendor Lock-in:</strong> Depending on the extent of customization, there may be challenges in switching to a different vendor or system in the future.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        
+        function goBack() {
+            window.history.back();
+        }
+
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>

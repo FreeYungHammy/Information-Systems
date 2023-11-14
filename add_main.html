@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <p>Information Systems In Business</p>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container">
+
+                <div class="protocol">
+                    <div>
+                        <p class="heading">Data Visualization Importance</p>
+                        <p class="protocol-content hidden">Information perception includes addressing information graphically to assist individuals with understanding the meaning of data of interest. It assumes an essential part in business knowledge, navigation, and correspondence.</p>
+                        <p><a href="add_1.html">Click here to learn more -></a></p>
+                    </div>
+                </div>
+            
+                <div class="protocol">
+                    <p class="heading">Information Quality Definition</p>
+                    <p class="protocol-content hidden">Data quality alludes to how much data is precise, dependable, significant, ideal, and predictable. High data quality is fundamental for going with educated choices and guaranteeing the dependability regarding business processes.</p>
+                    <p><a href="add_2.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">Data Ethics Definition</p>
+                    <p class="protocol-content hidden">Information ethics alludes to the mindful and moral utilization of information, resolving issues like protection, assent, straightforwardness, and reasonableness in information related rehearses.</p>
+                    <p><a href="add_3.html">Click here to learn more -></a></p>
+                </div>
+    
+                <div class="protocol">
+                    <p class="heading">AI and Information Systems in Business</p>
+                    <p class="protocol-content hidden">AI and information systems integration include incorporating artificial intelligence into business cycles and data frameworks to upgrade direction, robotize assignments, and get significant experiences from data.</p>
+                    <p><a href="add_4.html">Click here to learn more -></a></p>
+                </div>
+            
+                <div class="protocol">
+                    <p class="heading">Information System Integration in a Business</p>
+                    <p class="protocol-content hidden">Data system integration involves consolidating various components or systems within a business to work as a unified and cohesive entity. This integration improves communication, data flow, and overall efficiency.</p>
+                    <p><a href="add_5.html">Click here to learn more -></a></p>
+                </div>
+            
+                <div class="protocol">
+                    <p class="heading">Customizing Information Systems</p>
+                    <p class="protocol-content hidden">Customizing information systems involves tailoring software and processes to meet the specific needs and requirements of a business. This ensures that the system aligns closely with the organization's unique operations and goals.</p>
+                    <p><a href="add_6.html">Click here to learn more -></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const protocols = document.querySelectorAll(".protocol");
+
+    protocols.forEach((protocol) => {
+        let isTyping = false;
+        const contentParagraph = protocol.querySelector(".protocol-content");
+
+        if (contentParagraph) {
+            protocol.addEventListener("mouseenter", () => {
+                if (!isTyping) {
+                    isTyping = true;
+                    typeWriter(contentParagraph);
+                }
+            });
+        }
+    });
+
+    function typeWriter(element) {
+        const text = element.textContent;
+        element.textContent = "";
+        element.style.display = "block"; // Show the content
+
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 20); // Adjust the typing speed (in milliseconds) by changing this value
+            }
+        }
+
+        type();
+    }
+});
+
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Systems</title>
+    <link rel="stylesheet" href="calvin_main.css">
+    <link rel="icon" href="favicon.jpg">
+</head>
+<body>
+    <article>
+        <section class="s1">
+            <header>
+                <img src="bulb_gif.gif" alt="bulb">
+                <h1>Information Systems In Business</h1>
+            </header>
+        </section>
+
+        <section class="s2">
+            <nav>
+                <ul id="navlist">
+                    <li><a href="homepg.html">Home</a></li>
+                    <li><a href="chatbot.html">Chat Bot</a></li>
+                    <li><a href="trent_main.html">Crucial Business Focus Areas</a></li> <!--Trents page is linked here-->
+                    <li><a href="calvin_main.html">Foundations of Business Excellence</a></li> <!-- Calvins page is linked here -->
+                    <li><a href="add_main.html">Additional Content and Key Terms</a></li> <!-- Gideon's page is linked here-->
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="s3">
+            <div class="container1">
+
+                <div class="protocol1">
+                    <div>
+                        <p class="heading">Risk Management</p>
+                        <!-- <p>Customer insights refer to customer analytics and market research data, to better understand the needs, wants and behaviours of customers. It allows the business to notice patterns, for example, producing jackets in the transition of summer to autumn.</p>
+                        <br>
+                        <p class="headings">Both quantitative and qualitative data is collected when reviewing customer insights, a business utilizes the following in order to gain customer insights:</p>
+                        <p>Online Reviews ~ Online reviews give a direct voice to the consumer, this data is valuable as it comes straight from the customer and outlines the effectiveness of the product, and where it can be improved.  </p>
+                        <br>
+                        <p>Social media platforms ~ Social media acts as a great way to obtain customer insight, it includes all from customer praise to their complaints and uses of the products. The business can gain a better understanding of the customers views on the products and what they compare the product to. </p>
+                        <br>
+                        <p>Website data ~ Website data can prove to be useful in the aspect of cookies. Internet cookies are data that is communicated with a website and a user’s browser, and it has the purpose to track the users interactions and preferences on the website. Cookies can be utilized by the website owner to understand how people found their website, how many times a user has visited their website, and how many and what pages the user looked at. These are just a few examples of how websites can be used for analytics in customer insights. </p>
+                     -->
+
+                     <ol>
+                        <li>Cybersecurity: IT's role in cybersecurity goes beyond prevention. Continuous monitoring, incident response systems, and threat intelligence are integral parts of risk management. In-depth security audits and penetration testing identify vulnerabilities.</li><br>
+                        <li>Compliance and Regulation: IT helps companies track and adhere to evolving regulations. Compliance management systems maintain records and facilitate audits, ensuring businesses meet legal requirements.</li><br>
+                        <li>Business Continuity: Disaster recovery plans leverage IT infrastructure. Regular data backups, redundancy, and cloud solutions ensure minimal downtime during disasters, reducing business risk.</li><br>
+                     </ol>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section class="s4">
+            <footer>
+                <a href="#top" id="scroll-to-top" title="Back to Top">↑</a>
+                <button id="back" onclick="goBack()">Go Back</button>
+            </footer>
+        </section>
+        
+    </article>
+
+
+    <script>
+                
+        function goBack() {
+            window.history.back();
+        }
+        
+        const scrollToTopButton = document.getElementById("scroll-to-top");
+        
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+        
+        scrollToTopButton.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>
